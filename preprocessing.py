@@ -45,13 +45,13 @@ def normalization(train_df, test_df, vocab_df, val_df):
         img_array_normalized = img_array / 255.0
     
         test_normalized.append(img_array_normalized)
-    for url in test_df['Picture']:
+    for url in val_df['Picture']:
         img = load_img(cwd + '/msl-images/' + url)
         img_array = img_to_array(img)
     
         img_array_normalized = img_array / 255.0
     
-        test_normalized.append(img_array_normalized)
+        validation_normalized.append(img_array_normalized)
         # Display a few of the training images
         for i in range(25):
             plt.subplot(5,5,i+1)
