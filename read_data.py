@@ -113,12 +113,12 @@ def collect_data(file_path):
     vocab_df, train_df, test_df, val_df = file_processor.process_all()
 
     return vocab_df, train_df, test_df, val_df
-def main():
+def read_data():
     
     dataset_path = file_path(file_name)
     vocab_df, train_df, test_df, val_df = collect_data(dataset_path)
     
     return vocab_df, train_df, test_df, val_df
 if __name__ == "__main__":
-    main()
+    read_data()
     
