@@ -106,7 +106,7 @@ def collect_data(file_path):
             train_df = self.read_shuffled(self.train_path)
             test_df = self.read_shuffled(self.test_path)
             val_df = self.read_shuffled(self.val_path)
-
+            
             return vocab_df, train_df, test_df, val_df
     # Process all file paths into dataframes
     file_processor = FileProcessing(vocab_path, test_path, test_path, val_path)

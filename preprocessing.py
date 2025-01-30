@@ -53,6 +53,7 @@ def normalization(train_df, test_df, vocab_df, val_df):
     
         validation_normalized.append(img_array_normalized)
         # Display a few of the training images
+        '''
         for i in range(25):
             plt.subplot(5,5,i+1)
             plt.xticks([])
@@ -61,10 +62,11 @@ def normalization(train_df, test_df, vocab_df, val_df):
             plt.imshow(train_normalized[i])
             plt.xlabel(train_labels[i])
         plt.show()
+        '''
     return train_normalized, test_normalized, validation_normalized
 
 def preprocess():
     train_norm, test_norm, validation_norm = normalization(train_df, test_df, vocab_df, val_df)
-
+    return train_norm, test_norm, validation_norm
 if __name__ == '__main__':
     preprocess()
