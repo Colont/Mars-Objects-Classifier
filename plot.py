@@ -15,7 +15,7 @@ loss = history.history['loss']
 val_loss = history.history['val_loss']
 
 print(history.history.keys())
-epochs =10
+epochs = 10
 epochs_range = range(epochs)
 
 plt.figure(figsize=(8, 8))
@@ -32,3 +32,7 @@ plt.legend(loc='upper right')
 plt.title('Training and Validation Loss')
 
 plt.show()
+
+
+predictions = model.predict(X_test[:3])
+print("predictions shape:", predictions.shape)
